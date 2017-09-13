@@ -1,13 +1,13 @@
 # Update and upgrade
 add-apt-repository -y ppa:plt/racket
 add-apt-repository -y ppa:webupd8team/atom
+add-apt-repository -y ppa:embrosyn/cinnamon
+
 apt-get -y update
 
 DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
 
-export LANG="en_US.UTF8"
-export LC_ALL="$LANG"
-export LC_CTYPE="$LANG"
+apt-get install -y virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
 
 apt-get install -y git \
   unzip \
@@ -29,4 +29,5 @@ apt-get install -y git \
   python3-pip \
   python3-dev \
   openjdk-8-jdk \
-  racket
+  racket \
+  cinnamon

@@ -1,11 +1,15 @@
 # Update and upgrade
-sudo add-apt-repository -y ppa:plt/racket
-sudo add-apt-repository -y ppa:webupd8team/atom
-sudo apt-get -y update
+add-apt-repository -y ppa:plt/racket
+add-apt-repository -y ppa:webupd8team/atom
+apt-get -y update
 
 DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
 
-sudo apt-get install -y git \
+export LANG="en_US.UTF8"
+export LC_ALL="$LANG"
+export LC_CTYPE="$LANG"
+
+apt-get install -y git \
   unzip \
   silversearcher-ag \
   firefox \
@@ -20,4 +24,9 @@ sudo apt-get install -y git \
   rake \
   atom \
   libxss1 \
-  jq
+  jq \
+  python3 \
+  python3-pip \
+  python3-dev \
+  openjdk-8-jdk \
+  racket

@@ -1,4 +1,6 @@
 # Update and upgrade
+locale-gen "en_US.UTF-8"
+
 add-apt-repository -y ppa:plt/racket
 add-apt-repository -y ppa:webupd8team/atom
 add-apt-repository -y ppa:embrosyn/cinnamon
@@ -30,4 +32,8 @@ apt-get install -y git \
   python3-dev \
   openjdk-8-jdk \
   racket \
-  cinnamon
+  xinit \
+  cinnamon-desktop-environment
+
+pip3 install --upgrade pip
+pip3 install virtualenv virtualenvwrapper

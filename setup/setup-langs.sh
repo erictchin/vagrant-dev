@@ -1,8 +1,4 @@
 # Install Python
-
-pip3 install --upgrade pip
-pip3 install virtualenv virtualenvwrapper
-
 export VIRTUALENV_PYTHON=$(which python3)
 export VIRTUALENVWRAPPER_PYTHON=$(which python3)
 

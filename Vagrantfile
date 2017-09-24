@@ -3,6 +3,8 @@
 
 Vagrant.configure("2") do |config|
 
+  ENV['LC_ALL'] = "en_US.UTF-8"
+
   config.vm.box = "ubuntu/xenial64"
 
   config.vm.provider "virtualbox" do |vb|
